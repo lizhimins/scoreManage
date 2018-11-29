@@ -9,8 +9,7 @@ import manage.model.Student;
 
 public class StudentDao {
 	public int create(Connection con,Student stu) throws SQLException {
-        String sql = "INSERT INTO 'student'('stu_id', 'name', 'sex', 'stu_class', 'stu_dept', 'age', 'tel') "
-        		+ "VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO student VALUES (?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement pra = con.prepareStatement(sql);
         pra.setString(1, stu.getStu_id().get());
         pra.setString(2, stu.getName().get());
@@ -24,30 +23,28 @@ public class StudentDao {
         return resultNum;
     }
 	
-	public int delete(Connection con, String id) throws SQLException {
-		String sql = "DELETE FROM 'final'.'student' WHERE 'stu_id' = ?";
+	public boolean delete(Connection con, String id) throws SQLException {
+		String sql = "DELETE FROM student WHERE stu_id = ?";
 		PreparedStatement pra = con.prepareStatement(sql);
-        pra.setString(1, id.toString());
-        int resultNum = pra.executeUpdate();
+        pra.setString(1, id);
+        boolean flag = pra.execute();
         pra.close();
-        return resultNum;
+        return flag;
 	}
 	
-	public int update(Connection con, String id, Student stu) throws SQLException {
-		String sql = "UPDATE 'student' SET 'name' = ?, 'sex' = ?, 'stu_class' = ?, 'stu_dept' = ?,"
-				+ " 'age' = ?, 'tel' = ? WHERE 'stu_id' = ?";
+	public int update(Connection con, Student stu) throws SQLException {
+		String sql = "UPDATE student SET student.`name` = ?, `sex` = ?, `stu_class` = ?, `stu_dept` = ?, `age` = ?, `tel` = ? WHERE stu_id = ?;";
 		PreparedStatement pra = con.prepareStatement(sql);
-        pra.setString(1, stu.getStu_id().get());
-        pra.setString(2, stu.getName().get());
-        pra.setString(3, stu.getSex().get());
-        pra.setString(4, stu.getStu_class().get());
-        pra.setString(5, stu.getStu_dept().get());
-        pra.setString(6, stu.getAge().get() + "");
-        pra.setString(7, stu.getTel().get());
-        pra.setString(8, id.toString());
-        int resultNum = pra.executeUpdate();
+        pra.setString(1, stu.getName().get());
+        pra.setString(2, stu.getSex().get());
+        pra.setString(3, stu.getStu_class().get());
+        pra.setString(4, stu.getStu_dept().get());
+        pra.setInt(5, stu.getAge().get());
+        pra.setString(6, stu.getTel().get());
+        pra.setString(7, stu.getStu_id().get());
+        int rows = pra.executeUpdate();
         pra.close();
-        return resultNum;
+        return rows;
 	}
 	
 	public ArrayList<Student> query(Connection con, String string) throws SQLException {

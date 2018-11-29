@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="406.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage.view.StudentOverviewController">
    <children>
-      <SplitPane dividerPositions="0.29797979797979796" layoutX="-38.0" layoutY="-68.0" prefHeight="406.0" prefWidth="680.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.3" layoutX="-38.0" layoutY="-68.0" prefHeight="406.0" prefWidth="680.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
@@ -105,10 +105,10 @@
                   <ButtonBar layoutX="54.0" layoutY="250.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
                     <buttons>
                     	<Button mnemonicParsing="false" onAction="#handleSearchStudent" text="查询" />
-                        <Button mnemonicParsing="false" onAction="#handleNewStudent" text="插入" />
+                        <Button mnemonicParsing="false" onAction="#handleNewStudent" text="新增" />
                         <Button mnemonicParsing="false" onAction="#handleEditStudent" text="编辑" />
                         <Button mnemonicParsing="false" onAction="#handleDeleteStudent" text="删除" />
-                        <Button fx:id="exitButton" mnemonicParsing="false" onAction="#handleExit" text="删除" />
+                        <Button mnemonicParsing="false" onAction="#handleExit" text="返回" />
                     </buttons>
                   </ButtonBar>
                </children>

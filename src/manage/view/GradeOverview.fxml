@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="406.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage.view.StudentOverviewController">
+<AnchorPane prefHeight="406.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage.view.GradeOverviewController">
    <children>
       <SplitPane dividerPositions="0.3" layoutX="-38.0" layoutY="-68.0" prefHeight="406.0" prefWidth="680.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -14,7 +14,7 @@
                <children>
                   <TableView fx:id="Table" layoutX="-12.0" layoutY="49.0" prefHeight="298.0" prefWidth="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn fx:id="Column1" prefWidth="75.0" text="学号" />
+                      <TableColumn fx:id="Column1" prefWidth="75.0" text="课程名称" />
                       <TableColumn fx:id="Column2" prefWidth="75.0" text="姓名" />
                     </columns>
                      <columnResizePolicy>
@@ -25,7 +25,7 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="327.0" prefWidth="417.0">
                <children>
-                  <Label layoutX="104.0" layoutY="51.0" text="学生信息" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+                  <Label layoutX="104.0" layoutY="51.0" text="成绩信息" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
                      <font>
                         <Font size="16.0" />
                      </font></Label>
@@ -41,62 +41,53 @@
                         <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                       <children>
-                        <Label text="学号">
+                        <Label text="记录编号">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                        <Label prefHeight="15.0" prefWidth="82.0" text="姓名" GridPane.rowIndex="1">
+                        <Label prefHeight="15.0" prefWidth="82.0" text="课程编号" GridPane.rowIndex="1">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                        <Label text="性别" GridPane.rowIndex="2">
+                        <Label text="课程名字" GridPane.rowIndex="2">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                        <Label text="班级" GridPane.rowIndex="3">
+                        <Label text="学号" GridPane.rowIndex="3">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                        <Label text="系部" GridPane.rowIndex="4">
+                        <Label text="姓名" GridPane.rowIndex="4">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                        <Label text="年龄" GridPane.rowIndex="5">
+                        <Label text="成绩" GridPane.rowIndex="5">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                        <Label text="手机号码" GridPane.rowIndex="6">
-                           <font>
-                              <Font size="16.0" />
-                           </font></Label>
-                        <TextField fx:id="Textstu_id" GridPane.columnIndex="1">
+                        <TextField fx:id="TextGrade_id" GridPane.columnIndex="1">
                            <font>
                               <Font size="16.0" />
                            </font></TextField>
-                        <TextField fx:id="TextName" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <TextField fx:id="TextCourse_id" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <font>
                               <Font size="16.0" />
                            </font></TextField>
-                        <TextField fx:id="TextSex" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <TextField fx:id="TextCourse_name" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <font>
                               <Font size="16.0" />
                            </font></TextField>
-                        <TextField fx:id="TextStu_class" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <TextField fx:id="TextStudent_id" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <font>
                               <Font size="16.0" />
                            </font></TextField>
-                        <TextField fx:id="TextStu_dept" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <TextField fx:id="TextStudent_name" GridPane.columnIndex="1" GridPane.rowIndex="4">
                            <font>
                               <Font size="16.0" />
                            </font></TextField>
-                        <TextField fx:id="TextAge" GridPane.columnIndex="1" GridPane.rowIndex="5">
-                           <font>
-                              <Font size="16.0" />
-                           </font></TextField>
-                        <TextField fx:id="TextTel" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                        <TextField fx:id="TextGrade" GridPane.columnIndex="1" GridPane.rowIndex="5">
                            <font>
                               <Font size="16.0" />
                            </font></TextField>
@@ -104,10 +95,10 @@
                   </GridPane>
                   <ButtonBar layoutX="54.0" layoutY="250.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
                     <buttons>
-                    	<Button mnemonicParsing="false" onAction="#handleSearchStudent" text="查询" />
-                        <Button mnemonicParsing="false" onAction="#handleNewStudent" text="新增" />
-                        <Button mnemonicParsing="false" onAction="#handleEditStudent" text="编辑" />
-                        <Button mnemonicParsing="false" onAction="#handleDeleteStudent" text="删除" />
+                    	<Button mnemonicParsing="false" onAction="#handleSearch" text="查询" />
+                        <Button mnemonicParsing="false" onAction="#handleNew" text="新增" />
+                        <Button mnemonicParsing="false" onAction="#handleEdit" text="编辑" />
+                        <Button mnemonicParsing="false" onAction="#handleDelete" text="删除" />
                         <Button mnemonicParsing="false" onAction="#handleExit" text="返回" />
                     </buttons>
                   </ButtonBar>

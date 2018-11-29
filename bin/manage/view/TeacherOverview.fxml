@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="406.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage.view.StudentOverviewController">
+<AnchorPane prefHeight="406.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage.view.TeacherOverviewController">
    <children>
       <SplitPane dividerPositions="0.3" layoutX="-38.0" layoutY="-68.0" prefHeight="406.0" prefWidth="680.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -44,7 +44,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                       <children>
-                        <Label text="学号">
+                        <Label text="教工号">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
@@ -56,11 +56,11 @@
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                        <Label text="班级" GridPane.rowIndex="3">
+                        <Label text="学历" GridPane.rowIndex="3">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                        <Label text="系部" GridPane.rowIndex="4">
+                        <Label text="职称" GridPane.rowIndex="4">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
@@ -72,7 +72,7 @@
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                        <TextField fx:id="Textstu_id" GridPane.columnIndex="1">
+                        <TextField fx:id="TextTeacher_id" GridPane.columnIndex="1">
                            <font>
                               <Font size="16.0" />
                            </font></TextField>
@@ -84,11 +84,11 @@
                            <font>
                               <Font size="16.0" />
                            </font></TextField>
-                        <TextField fx:id="TextStu_class" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <TextField fx:id="TextEducation" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <font>
                               <Font size="16.0" />
                            </font></TextField>
-                        <TextField fx:id="TextStu_dept" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <TextField fx:id="TextAcademic" GridPane.columnIndex="1" GridPane.rowIndex="4">
                            <font>
                               <Font size="16.0" />
                            </font></TextField>
@@ -104,10 +104,10 @@
                   </GridPane>
                   <ButtonBar layoutX="54.0" layoutY="250.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
                     <buttons>
-                    	<Button mnemonicParsing="false" onAction="#handleSearchStudent" text="查询" />
-                        <Button mnemonicParsing="false" onAction="#handleNewStudent" text="新增" />
-                        <Button mnemonicParsing="false" onAction="#handleEditStudent" text="编辑" />
-                        <Button mnemonicParsing="false" onAction="#handleDeleteStudent" text="删除" />
+                    	<Button mnemonicParsing="false" onAction="#handleSearch" text="查询" />
+                        <Button mnemonicParsing="false" onAction="#handleNew" text="新增" />
+                        <Button mnemonicParsing="false" onAction="#handleEdit" text="编辑" />
+                        <Button mnemonicParsing="false" onAction="#handleDelete" text="删除" />
                         <Button mnemonicParsing="false" onAction="#handleExit" text="返回" />
                     </buttons>
                   </ButtonBar>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="406.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage.view.FunctionOverviewController">
+   <children>
+      <Button layoutX="266.0" layoutY="106.0" mnemonicParsing="false" onAction="#handleStudent" text="学生信息管理">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="266.0" layoutY="157.0" mnemonicParsing="false" onAction="#handleTeacher" text="教师信息管理">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="266.0" layoutY="208.0" mnemonicParsing="false" onAction="#handleCourse" text="课程信息管理">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="266.0" layoutY="260.0" mnemonicParsing="false" onAction="#handleGrade" text="成绩信息管理">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -8,16 +8,31 @@ import java.util.ArrayList;
 import manage.model.Student;
 
 public class StudentDao {
+	// 输入用户名，返回密码
+	public String queryPassWord(Connection con, String string) throws SQLException {
+		String password = "";
+		String sql = "SELECT student.`password` FROM student WHERE student.stu_id = ?";
+		PreparedStatement pra = con.prepareStatement(sql);
+		pra.setString(1, string);
+		ResultSet rs = pra.executeQuery();
+		while(rs.next()){
+            password = rs.getString("password");
+        }
+        rs.close();
+		return password;
+	}
+		
 	public int create(Connection con,Student stu) throws SQLException {
-        String sql = "INSERT INTO student VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO student VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement pra = con.prepareStatement(sql);
         pra.setString(1, stu.getStu_id().get());
         pra.setString(2, stu.getName().get());
-        pra.setString(3, stu.getSex().get());
-        pra.setString(4, stu.getStu_class().get());
-        pra.setString(5, stu.getStu_dept().get());
-        pra.setString(6, stu.getAge().get() + "");
-        pra.setString(7, stu.getTel().get());
+        pra.setString(3, stu.getPass().get());
+        pra.setString(4, stu.getSex().get());
+        pra.setString(5, stu.getStu_class().get());
+        pra.setString(6, stu.getStu_dept().get());
+        pra.setString(7, stu.getAge().get() + "");
+        pra.setString(8, stu.getTel().get());
         int resultNum = pra.executeUpdate();
         pra.close();
         return resultNum;
@@ -33,15 +48,16 @@ public class StudentDao {
 	}
 	
 	public int update(Connection con, Student stu) throws SQLException {
-		String sql = "UPDATE student SET student.`name` = ?, `sex` = ?, `stu_class` = ?, `stu_dept` = ?, `age` = ?, `tel` = ? WHERE stu_id = ?;";
+		String sql = "UPDATE student SET student.`name` = ?, `password` = ?, `sex` = ?, `stu_class` = ?, `stu_dept` = ?, `age` = ?, `tel` = ? WHERE stu_id = ?;";
 		PreparedStatement pra = con.prepareStatement(sql);
         pra.setString(1, stu.getName().get());
-        pra.setString(2, stu.getSex().get());
-        pra.setString(3, stu.getStu_class().get());
-        pra.setString(4, stu.getStu_dept().get());
-        pra.setInt(5, stu.getAge().get());
-        pra.setString(6, stu.getTel().get());
-        pra.setString(7, stu.getStu_id().get());
+        pra.setString(2, stu.getPass().get());
+        pra.setString(3, stu.getSex().get());
+        pra.setString(4, stu.getStu_class().get());
+        pra.setString(5, stu.getStu_dept().get());
+        pra.setInt(6, stu.getAge().get());
+        pra.setString(7, stu.getTel().get());
+        pra.setString(8, stu.getStu_id().get());
         int rows = pra.executeUpdate();
         pra.close();
         return rows;
@@ -57,12 +73,13 @@ public class StudentDao {
 		while(rs.next()){
             String stu_id = rs.getString("stu_id");
             String name = rs.getString("name");
+            String pass = rs.getString("password");
             String sex = rs.getString("sex");
             String stu_class = rs.getString("stu_class");
             String stu_dept = rs.getString("stu_dept");
             int age = Integer.valueOf(rs.getString("age"));
             String tel = rs.getString("tel");
-            Student tmp = new Student(stu_id, name, sex, stu_class, stu_dept, age, tel);
+            Student tmp = new Student(stu_id, name, pass, sex, stu_class, stu_dept, age, tel);
             student.add(tmp);
         }
         rs.close();

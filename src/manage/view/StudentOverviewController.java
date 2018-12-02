@@ -26,6 +26,8 @@ public class StudentOverviewController {
     @FXML
     private TextField TextName;
     @FXML
+    private TextField TextPassword;
+    @FXML
     private TextField TextSex;
     @FXML
     private TextField TextStu_class;
@@ -74,6 +76,7 @@ public class StudentOverviewController {
         if (student != null) {
             Textstu_id.setText(student.getStu_id().get());
             TextName.setText(student.getName().get());
+            TextPassword.setText(student.getPass().get());
             TextSex.setText(student.getSex().get());
             TextStu_class.setText(student.getStu_class().get());
             TextStu_dept.setText(student.getStu_dept().get());
@@ -115,7 +118,7 @@ public class StudentOverviewController {
     }
     
     private Student getInformation() {
-    	return new Student(Textstu_id.getText(), TextName.getText(),TextSex.getText(), TextStu_class.getText(),TextStu_dept.getText(),Integer.parseInt(TextAge.getText()),TextTel.getText());
+    	return new Student(Textstu_id.getText(), TextName.getText(), TextPassword.getText(), TextSex.getText(), TextStu_class.getText(),TextStu_dept.getText(),Integer.parseInt(TextAge.getText()),TextTel.getText());
     }
     
 	// ÐÂ½¨²Ù×÷

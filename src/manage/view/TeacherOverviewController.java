@@ -26,6 +26,8 @@ public class TeacherOverviewController {
     @FXML
     private TextField TextName;
     @FXML
+    private TextField TextPassword;
+    @FXML
     private TextField TextSex;
     @FXML
     private TextField TextEducation;
@@ -74,6 +76,7 @@ public class TeacherOverviewController {
         if (teacher != null) {
         	TextTeacher_id.setText(teacher.getTeacher_id().get());
             TextName.setText(teacher.getName().get());
+            TextPassword.setText(teacher.getPass().get());
             TextSex.setText(teacher.getSex().get());
             TextEducation.setText(teacher.getEducation().get());
             TextAcademic.setText(teacher.getAcademic().get());
@@ -118,7 +121,7 @@ public class TeacherOverviewController {
     }
     
     private Teacher getInformation() {
-    	return new Teacher(TextTeacher_id.getText(), TextName.getText(),TextSex.getText(), TextEducation.getText(), TextAcademic.getText(), Integer.parseInt(TextAge.getText()), TextTel.getText());
+    	return new Teacher(TextTeacher_id.getText(), TextName.getText(), TextPassword.getText(), TextSex.getText(), TextEducation.getText(), TextAcademic.getText(), Integer.parseInt(TextAge.getText()), TextTel.getText());
     }
     
 	// ÐÂ½¨²Ù×÷

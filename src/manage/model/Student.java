@@ -8,6 +8,7 @@ import javafx.beans.property.StringProperty;
 public class Student {
 	private StringProperty stu_id;
 	private StringProperty name;
+	private StringProperty pass;
     private StringProperty sex;
     private StringProperty stu_class;
     private StringProperty stu_dept;
@@ -17,6 +18,7 @@ public class Student {
     public Student() {
 		this.stu_id = new SimpleStringProperty("");
 		this.name = new SimpleStringProperty("");
+		this.pass = new SimpleStringProperty("");
 		this.sex = new SimpleStringProperty("");
 		this.stu_class = new SimpleStringProperty("");
 		this.stu_dept = new SimpleStringProperty("");
@@ -24,9 +26,10 @@ public class Student {
 		this.tel = new SimpleStringProperty("");
 	}
     
-    public Student(String stu_id, String name, String sex, String stu_class, String stu_dept, int age, String tel) {
+    public Student(String stu_id, String name, String pass, String sex, String stu_class, String stu_dept, int age, String tel) {
 		this.stu_id = new SimpleStringProperty(stu_id);
 		this.name = new SimpleStringProperty(name);
+		this.pass = new SimpleStringProperty(pass);
 		this.sex = new SimpleStringProperty(sex);
 		this.stu_class = new SimpleStringProperty(stu_class);
 		this.stu_dept = new SimpleStringProperty(stu_dept);
@@ -46,6 +49,15 @@ public class Student {
 	public void setName(StringProperty name) {
 		this.name = name;
 	}
+	
+	public StringProperty getPass() {
+		return pass;
+	}
+
+	public void setPass(StringProperty pass) {
+		this.pass = pass;
+	}
+
 	public StringProperty getSex() {
 		return sex;
 	}

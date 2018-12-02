@@ -40,6 +40,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
                     </rowConstraints>
@@ -52,23 +53,23 @@
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                        <Label text="性别" GridPane.rowIndex="2">
+                        <Label text="性别" GridPane.rowIndex="3">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                        <Label text="班级" GridPane.rowIndex="3">
+                        <Label text="班级" GridPane.rowIndex="4">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                        <Label text="系部" GridPane.rowIndex="4">
+                        <Label text="系部" GridPane.rowIndex="5">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                        <Label text="年龄" GridPane.rowIndex="5">
+                        <Label text="年龄" GridPane.rowIndex="6">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                        <Label text="手机号码" GridPane.rowIndex="6">
+                        <Label text="手机号码" GridPane.rowIndex="7">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
@@ -80,26 +81,36 @@
                            <font>
                               <Font size="16.0" />
                            </font></TextField>
-                        <TextField fx:id="TextSex" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <TextField fx:id="TextSex" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <font>
                               <Font size="16.0" />
                            </font></TextField>
-                        <TextField fx:id="TextStu_class" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <TextField fx:id="TextStu_class" GridPane.columnIndex="1" GridPane.rowIndex="4">
                            <font>
                               <Font size="16.0" />
                            </font></TextField>
-                        <TextField fx:id="TextStu_dept" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <TextField fx:id="TextStu_dept" GridPane.columnIndex="1" GridPane.rowIndex="5">
                            <font>
                               <Font size="16.0" />
                            </font></TextField>
-                        <TextField fx:id="TextAge" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                        <TextField fx:id="TextAge" GridPane.columnIndex="1" GridPane.rowIndex="6">
                            <font>
                               <Font size="16.0" />
                            </font></TextField>
-                        <TextField fx:id="TextTel" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                        <TextField fx:id="TextTel" GridPane.columnIndex="1" GridPane.rowIndex="7">
                            <font>
                               <Font size="16.0" />
                            </font></TextField>
+                        <Label text="密码" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="TextPassword" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
                      </children>
                   </GridPane>
                   <ButtonBar layoutX="54.0" layoutY="250.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">

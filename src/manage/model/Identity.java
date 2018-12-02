@@ -1,7 +1,7 @@
 package manage.model;
 
 public class Identity {
-	private static String Identity;
+	private static String Identity = "Visitor";
 
 	public static String getIdentity() {
 		return Identity;
@@ -17,5 +17,9 @@ public class Identity {
 	
 	public static void setStudent() {
 		Identity = "Student";
+	}
+	
+	public static void setVisitor() {
+		Identity = "Visitor";
 	}
 }

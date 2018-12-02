@@ -1,9 +1,6 @@
 package manage;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
-
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -12,15 +9,11 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import manage.dao.AdminDao;
-import manage.dao.CourseDao;
 import manage.model.Course;
 import manage.model.Grade;
 import manage.model.Identity;
 import manage.model.Student;
 import manage.model.Teacher;
-import manage.util.AlertUtil;
-import manage.util.DbUtil;
 import manage.view.CourseOverviewController;
 import manage.view.FunctionOverviewController;
 import manage.view.GradeOverviewController;
@@ -36,19 +29,9 @@ public class MainApp extends Application {
     public ObservableList<Teacher> teacherData = FXCollections.observableArrayList();
     public ObservableList<Course> courseData = FXCollections.observableArrayList();
     public ObservableList<Grade> gradeData = FXCollections.observableArrayList();
-    public Identity identity;
-    public MainApp(){
-    	/*
-    	DbUtil dbUtil = new DbUtil();
-     	Connection con;
-		try {
-			con = dbUtil.getCon();
-			AdminDao dao = new AdminDao();
-	    	AlertUtil.Information(dao.query(con, "admin"), "");
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
+    public MainApp() {
+    	//Identity.setAdmin();
+    	Identity.setVisitor();
     }
 
     // 构造对象序列

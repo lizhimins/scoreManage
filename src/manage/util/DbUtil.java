@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DbUtil {
-	String dbUrl = "jdbc:mysql://10.66.1.101:3300/final?useUnicode=true&characterEncoding=UTF-8";
+	String dbUrl = "jdbc:mysql://47.100.14.134:3306/zstu?useUnicode=true&characterEncoding=UTF-8";
     String dbUser = "root";
     String dbPass = "123456";
     String driveName = "com.mysql.jdbc.Driver";

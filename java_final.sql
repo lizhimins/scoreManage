@@ -1,21 +1,36 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : 10.66.1.101
+ Source Server         : 47.100.14.134
  Source Server Type    : MySQL
  Source Server Version : 50642
- Source Host           : 10.66.1.101:3300
- Source Schema         : final
+ Source Host           : 47.100.14.134:3306
+ Source Schema         : zstu
 
  Target Server Type    : MySQL
  Target Server Version : 50642
  File Encoding         : 65001
 
- Date: 22/11/2018 19:55:23
+ Date: 13/12/2018 20:48:24
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for admin
+-- ----------------------------
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE `admin`  (
+  `users` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of admin
+-- ----------------------------
+INSERT INTO `admin` VALUES ('admin', '123');
+INSERT INTO `admin` VALUES ('admin1', '123456');
 
 -- ----------------------------
 -- Table structure for course
@@ -267,6 +282,7 @@ DROP TABLE IF EXISTS `student`;
 CREATE TABLE `student`  (
   `stu_id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `sex` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `stu_class` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `stu_dept` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
@@ -278,73 +294,73 @@ CREATE TABLE `student`  (
 -- ----------------------------
 -- Records of student
 -- ----------------------------
-INSERT INTO `student` VALUES ('Xb16610222', '周游', '男', '16计算机科学与技术（2）', '机电系', 21, '15558016606');
-INSERT INTO `student` VALUES ('Xb16610226', '牛小璐', '女', '16计算机科学与技术（1）', '机电系', 21, '13290928379');
-INSERT INTO `student` VALUES ('Xb16620101', '鲍佳忠', '男', '16计算机科学与技术（1）', '机电系', 20, '15868178656');
-INSERT INTO `student` VALUES ('Xb16620102', '查晨威', '男', '16计算机科学与技术（1）', '机电系', 21, '17826871109');
-INSERT INTO `student` VALUES ('Xb16620103', '陈辉', '男', '16计算机科学与技术（1）', '机电系', 20, '18758820407');
-INSERT INTO `student` VALUES ('Xb16620104', '陈杰', '男', '16计算机科学与技术（1）', '机电系', 21, '18305871862');
-INSERT INTO `student` VALUES ('Xb16620105', '陈镪', '男', '16计算机科学与技术（1）', '机电系', 20, '13958906173');
-INSERT INTO `student` VALUES ('Xb16620106', '陈钰博', '男', '16计算机科学与技术（1）', '机电系', 20, '18805873328');
-INSERT INTO `student` VALUES ('Xb16620107', '冯佳鹏', '男', '16计算机科学与技术（1）', '机电系', 20, '15868176653');
-INSERT INTO `student` VALUES ('Xb16620108', '韩锦辉', '男', '16计算机科学与技术（1）', '机电系', 21, '15858243024');
-INSERT INTO `student` VALUES ('Xb16620109', '李志祥', '男', '16计算机科学与技术（1）', '机电系', 21, '15158759500');
-INSERT INTO `student` VALUES ('Xb16620110', '柳成昊', '男', '16计算机科学与技术（1）', '机电系', 20, '15862875751');
-INSERT INTO `student` VALUES ('Xb16620111', '陆沛', '男', '16计算机科学与技术（1）', '机电系', 20, '15868176071');
-INSERT INTO `student` VALUES ('Xb16620112', '罗雷', '男', '16计算机科学与技术（1）', '机电系', 20, '15888793436');
-INSERT INTO `student` VALUES ('Xb16620113', '瞿如勇', '男', '16计算机科学与技术（1）', '机电系', 20, '17301851372');
-INSERT INTO `student` VALUES ('Xb16620114', '滕刚峰', '男', '16计算机科学与技术（1）', '机电系', 21, '15868175021');
-INSERT INTO `student` VALUES ('Xb16620115', '王子轩', '男', '16计算机科学与技术（1）', '机电系', 20, '15868173887');
-INSERT INTO `student` VALUES ('Xb16620116', '温正鸿', '男', '16计算机科学与技术（1）', '机电系', 20, '17348845891');
-INSERT INTO `student` VALUES ('Xb16620117', '吴润豪', '男', '16计算机科学与技术（1）', '机电系', 21, '17815514153');
-INSERT INTO `student` VALUES ('Xb16620118', '谢栋', '男', '16计算机科学与技术（1）', '机电系', 21, '15868173623');
-INSERT INTO `student` VALUES ('Xb16620119', '许俊杰', '男', '16计算机科学与技术（1）', '机电系', 21, '17815514385');
-INSERT INTO `student` VALUES ('Xb16620120', '杨思誉', '男', '16计算机科学与技术（1）', '机电系', 20, '17348846507');
-INSERT INTO `student` VALUES ('Xb16620121', '姚光虎', '男', '16计算机科学与技术（1）', '机电系', 20, '18226711519');
-INSERT INTO `student` VALUES ('Xb16620122', '臧苏云', '男', '16计算机科学与技术（1）', '机电系', 21, '17348847363');
-INSERT INTO `student` VALUES ('Xb16620123', '张鑫磊', '男', '16计算机科学与技术（1）', '机电系', 20, '15727835736');
-INSERT INTO `student` VALUES ('Xb16620124', '朱清尧', '男', '16计算机科学与技术（1）', '机电系', 21, '15868171732');
-INSERT INTO `student` VALUES ('Xb16620125', '丁滢', '女', '16计算机科学与技术（1）', '机电系', 21, '13777446398');
-INSERT INTO `student` VALUES ('Xb16620126', '方巧梨', '女', '16计算机科学与技术（1）', '机电系', 21, '15868171527');
-INSERT INTO `student` VALUES ('Xb16620127', '黄诺琳', '女', '16计算机科学与技术（1）', '机电系', 21, '15868171201');
-INSERT INTO `student` VALUES ('Xb16620128', '毛婷钰', '女', '16计算机科学与技术（1）', '机电系', 20, '15868170873');
-INSERT INTO `student` VALUES ('Xb16620129', '唐倩倩', '女', '16计算机科学与技术（1）', '机电系', 21, '13515857405');
-INSERT INTO `student` VALUES ('Xb16620130', '汪雨佳', '女', '16计算机科学与技术（1）', '机电系', 20, '18758140745');
-INSERT INTO `student` VALUES ('Xb16620131', '周晓姌', '女', '16计算机科学与技术（1）', '机电系', 21, '18297960291');
-INSERT INTO `student` VALUES ('Xb16620201', '蔡克建', '男', '16计算机科学与技术（2）', '机电系', 21, '15868170211');
-INSERT INTO `student` VALUES ('Xb16620202', '常梦然', '男', '16计算机科学与技术（2）', '机电系', 21, '17815513172');
-INSERT INTO `student` VALUES ('Xb16620203', '陈柯奇', '男', '16计算机科学与技术（2）', '机电系', 21, '18368548059');
-INSERT INTO `student` VALUES ('Xb16620205', '李凯旋', '男', '16计算机科学与技术（2）', '机电系', 20, '17815513159');
-INSERT INTO `student` VALUES ('Xb16620206', '廖晓峰', '男', '16计算机科学与技术（2）', '机电系', 20, '18767873401');
-INSERT INTO `student` VALUES ('Xb16620207', '林炜祎', '男', '16计算机科学与技术（2）', '机电系', 21, '13757006078');
-INSERT INTO `student` VALUES ('Xb16620208', '陆宇豪', '男', '16计算机科学与技术（2）', '机电系', 21, '15868168532');
-INSERT INTO `student` VALUES ('Xb16620209', '毛克杰', '男', '16计算机科学与技术（2）', '机电系', 21, '15706811257');
-INSERT INTO `student` VALUES ('Xb16620210', '宁清晨', '男', '16计算机科学与技术（2）', '机电系', 20, '15868167293');
-INSERT INTO `student` VALUES ('Xb16620211', '沈锋', '男', '16计算机科学与技术（2）', '机电系', 21, '13858422964');
-INSERT INTO `student` VALUES ('Xb16620212', '史佳明', '男', '16计算机科学与技术（2）', '机电系', 21, '15157363008');
-INSERT INTO `student` VALUES ('Xb16620213', '唐子豪', '男', '16计算机科学与技术（2）', '机电系', 20, '15268064624');
-INSERT INTO `student` VALUES ('Xb16620214', '王金旭', '男', '16计算机科学与技术（2）', '机电系', 21, '17348845309');
-INSERT INTO `student` VALUES ('Xb16620215', '王俊达', '男', '16计算机科学与技术（2）', '机电系', 21, '15727885016');
-INSERT INTO `student` VALUES ('Xb16620216', '王一帆', '男', '16计算机科学与技术（2）', '机电系', 20, '15868163725');
-INSERT INTO `student` VALUES ('Xb16620217', '吴鑫潮', '男', '16计算机科学与技术（2）', '机电系', 20, '15868163631');
-INSERT INTO `student` VALUES ('Xb16620218', '许鑫磊', '男', '16计算机科学与技术（2）', '机电系', 21, '18357616066');
-INSERT INTO `student` VALUES ('Xb16620219', '叶军', '男', '16计算机科学与技术（2）', '机电系', 20, '17815513117');
-INSERT INTO `student` VALUES ('Xb16620220', '张金奎', '男', '16计算机科学与技术（2）', '机电系', 21, '17348845296');
-INSERT INTO `student` VALUES ('Xb16620221', '张能', '男', '16计算机科学与技术（2）', '机电系', 20, '17348845931');
-INSERT INTO `student` VALUES ('Xb16620222', '张伟元', '男', '16计算机科学与技术（2）', '机电系', 20, '15755066402');
-INSERT INTO `student` VALUES ('Xb16620223', '钟黎辉', '男', '16计算机科学与技术（2）', '机电系', 20, '17348845769');
-INSERT INTO `student` VALUES ('Xb16620224', '朱炫翰', '男', '16计算机科学与技术（2）', '机电系', 20, '15868162125');
-INSERT INTO `student` VALUES ('Xb16620225', '施嘉琪', '女', '16计算机科学与技术（2）', '机电系', 20, '18257878812');
-INSERT INTO `student` VALUES ('Xb16620226', '王超群', '女', '16计算机科学与技术（2）', '机电系', 21, '15957662859');
-INSERT INTO `student` VALUES ('Xb16620227', '王秀仪', '女', '16计算机科学与技术（2）', '机电系', 19, '13857591503');
-INSERT INTO `student` VALUES ('Xb16620228', '王依丽', '女', '16计算机科学与技术（2）', '机电系', 21, '15215806906');
-INSERT INTO `student` VALUES ('Xb16620229', '姚莹莹', '女', '16计算机科学与技术（2）', '机电系', 21, '15868160890');
-INSERT INTO `student` VALUES ('Xb16620230', '张伟', '女', '16计算机科学与技术（2）', '机电系', 21, '15868160576');
-INSERT INTO `student` VALUES ('Xb16620231', '章宝丹', '女', '16计算机科学与技术（2）', '机电系', 20, '15868160530');
-INSERT INTO `student` VALUES ('Xb16620233', '赖博纯', '男', '16计算机科学与技术（2）', '机电系', 20, '13706610709');
-INSERT INTO `student` VALUES ('Xb16680108', '李智敏', '男', '16计算机科学与技术（1）', '机电系', 20, '15868159657');
-INSERT INTO `student` VALUES ('Xc16560217', '毛飞红', '女', '16计算机科学与技术（1）', '机电系', 20, '15268883533');
-INSERT INTO `student` VALUES ('Xf16220132', '祝勇强', '男', '16计算机科学与技术（2）', '机电系', 21, '15868101035');
+INSERT INTO `student` VALUES ('Xb16610222', '周游', '12', '男', '16计算机科学与技术（2）', '机电系', 21, '15558016606');
+INSERT INTO `student` VALUES ('Xb16610226', '牛小璐', '23', '女', '16计算机科学与技术（1）', '机电系', 21, '13290928379');
+INSERT INTO `student` VALUES ('Xb16620101', '鲍佳忠', '13', '男', '16计算机科学与技术（1）', '机电系', 20, '15868178656');
+INSERT INTO `student` VALUES ('Xb16620102', '查晨威', '13', '男', '16计算机科学与技术（1）', '机电系', 21, '17826871109');
+INSERT INTO `student` VALUES ('Xb16620103', '陈辉', '14', '男', '16计算机科学与技术（1）', '机电系', 20, '18758820407');
+INSERT INTO `student` VALUES ('Xb16620104', '陈杰', '15', '男', '16计算机科学与技术（1）', '机电系', 21, '18305871862');
+INSERT INTO `student` VALUES ('Xb16620105', '陈镪', '16', '男', '16计算机科学与技术（1）', '机电系', 20, '13958906173');
+INSERT INTO `student` VALUES ('Xb16620106', '陈钰博', NULL, '男', '16计算机科学与技术（1）', '机电系', 20, '18805873328');
+INSERT INTO `student` VALUES ('Xb16620107', '冯佳鹏', NULL, '男', '16计算机科学与技术（1）', '机电系', 20, '15868176653');
+INSERT INTO `student` VALUES ('Xb16620108', '韩锦辉', NULL, '男', '16计算机科学与技术（1）', '机电系', 21, '15858243024');
+INSERT INTO `student` VALUES ('Xb16620109', '李志祥', NULL, '男', '16计算机科学与技术（1）', '机电系', 21, '15158759500');
+INSERT INTO `student` VALUES ('Xb16620110', '柳成昊', NULL, '男', '16计算机科学与技术（1）', '机电系', 20, '15862875751');
+INSERT INTO `student` VALUES ('Xb16620111', '陆沛', NULL, '男', '16计算机科学与技术（1）', '机电系', 20, '15868176071');
+INSERT INTO `student` VALUES ('Xb16620112', '罗雷', NULL, '男', '16计算机科学与技术（1）', '机电系', 20, '15888793436');
+INSERT INTO `student` VALUES ('Xb16620113', '瞿如勇', NULL, '男', '16计算机科学与技术（1）', '机电系', 20, '17301851372');
+INSERT INTO `student` VALUES ('Xb16620114', '滕刚峰', NULL, '男', '16计算机科学与技术（1）', '机电系', 21, '15868175021');
+INSERT INTO `student` VALUES ('Xb16620115', '王子轩', NULL, '男', '16计算机科学与技术（1）', '机电系', 20, '15868173887');
+INSERT INTO `student` VALUES ('Xb16620116', '温正鸿', NULL, '男', '16计算机科学与技术（1）', '机电系', 20, '17348845891');
+INSERT INTO `student` VALUES ('Xb16620117', '吴润豪', NULL, '男', '16计算机科学与技术（1）', '机电系', 21, '17815514153');
+INSERT INTO `student` VALUES ('Xb16620118', '谢栋', NULL, '男', '16计算机科学与技术（1）', '机电系', 21, '15868173623');
+INSERT INTO `student` VALUES ('Xb16620119', '许俊杰', NULL, '男', '16计算机科学与技术（1）', '机电系', 21, '17815514385');
+INSERT INTO `student` VALUES ('Xb16620120', '杨思誉', NULL, '男', '16计算机科学与技术（1）', '机电系', 20, '17348846507');
+INSERT INTO `student` VALUES ('Xb16620121', '姚光虎', NULL, '男', '16计算机科学与技术（1）', '机电系', 20, '18226711519');
+INSERT INTO `student` VALUES ('Xb16620122', '臧苏云', NULL, '男', '16计算机科学与技术（1）', '机电系', 21, '17348847363');
+INSERT INTO `student` VALUES ('Xb16620123', '张鑫磊', NULL, '男', '16计算机科学与技术（1）', '机电系', 20, '15727835736');
+INSERT INTO `student` VALUES ('Xb16620124', '朱清尧', NULL, '男', '16计算机科学与技术（1）', '机电系', 21, '15868171732');
+INSERT INTO `student` VALUES ('Xb16620125', '丁滢', NULL, '女', '16计算机科学与技术（1）', '机电系', 21, '13777446398');
+INSERT INTO `student` VALUES ('Xb16620126', '方巧梨', NULL, '女', '16计算机科学与技术（1）', '机电系', 21, '15868171527');
+INSERT INTO `student` VALUES ('Xb16620127', '黄诺琳', NULL, '女', '16计算机科学与技术（1）', '机电系', 21, '15868171201');
+INSERT INTO `student` VALUES ('Xb16620128', '毛婷钰', NULL, '女', '16计算机科学与技术（1）', '机电系', 20, '15868170873');
+INSERT INTO `student` VALUES ('Xb16620129', '唐倩倩', NULL, '女', '16计算机科学与技术（1）', '机电系', 21, '13515857405');
+INSERT INTO `student` VALUES ('Xb16620130', '汪雨佳', NULL, '女', '16计算机科学与技术（1）', '机电系', 20, '18758140745');
+INSERT INTO `student` VALUES ('Xb16620131', '周晓姌', NULL, '女', '16计算机科学与技术（1）', '机电系', 21, '18297960291');
+INSERT INTO `student` VALUES ('Xb16620201', '蔡克建', NULL, '男', '16计算机科学与技术（2）', '机电系', 21, '15868170211');
+INSERT INTO `student` VALUES ('Xb16620202', '常梦然', NULL, '男', '16计算机科学与技术（2）', '机电系', 21, '17815513172');
+INSERT INTO `student` VALUES ('Xb16620203', '陈柯奇', NULL, '男', '16计算机科学与技术（2）', '机电系', 21, '18368548059');
+INSERT INTO `student` VALUES ('Xb16620205', '李凯旋', NULL, '男', '16计算机科学与技术（2）', '机电系', 20, '17815513159');
+INSERT INTO `student` VALUES ('Xb16620206', '廖晓峰', NULL, '男', '16计算机科学与技术（2）', '机电系', 20, '18767873401');
+INSERT INTO `student` VALUES ('Xb16620207', '林炜祎', NULL, '男', '16计算机科学与技术（2）', '机电系', 21, '13757006078');
+INSERT INTO `student` VALUES ('Xb16620208', '陆宇豪', NULL, '男', '16计算机科学与技术（2）', '机电系', 21, '15868168532');
+INSERT INTO `student` VALUES ('Xb16620209', '毛克杰', NULL, '男', '16计算机科学与技术（2）', '机电系', 21, '15706811257');
+INSERT INTO `student` VALUES ('Xb16620210', '宁清晨', NULL, '男', '16计算机科学与技术（2）', '机电系', 20, '15868167293');
+INSERT INTO `student` VALUES ('Xb16620211', '沈锋', NULL, '男', '16计算机科学与技术（2）', '机电系', 21, '13858422964');
+INSERT INTO `student` VALUES ('Xb16620212', '史佳明', NULL, '男', '16计算机科学与技术（2）', '机电系', 21, '15157363008');
+INSERT INTO `student` VALUES ('Xb16620213', '唐子豪', NULL, '男', '16计算机科学与技术（2）', '机电系', 20, '15268064624');
+INSERT INTO `student` VALUES ('Xb16620214', '王金旭', NULL, '男', '16计算机科学与技术（2）', '机电系', 21, '17348845309');
+INSERT INTO `student` VALUES ('Xb16620215', '王俊达', NULL, '男', '16计算机科学与技术（2）', '机电系', 21, '15727885016');
+INSERT INTO `student` VALUES ('Xb16620216', '王一帆', NULL, '男', '16计算机科学与技术（2）', '机电系', 20, '15868163725');
+INSERT INTO `student` VALUES ('Xb16620217', '吴鑫潮', NULL, '男', '16计算机科学与技术（2）', '机电系', 20, '15868163631');
+INSERT INTO `student` VALUES ('Xb16620218', '许鑫磊', NULL, '男', '16计算机科学与技术（2）', '机电系', 21, '18357616066');
+INSERT INTO `student` VALUES ('Xb16620219', '叶军', NULL, '男', '16计算机科学与技术（2）', '机电系', 20, '17815513117');
+INSERT INTO `student` VALUES ('Xb16620220', '张金奎', NULL, '男', '16计算机科学与技术（2）', '机电系', 21, '17348845296');
+INSERT INTO `student` VALUES ('Xb16620221', '张能', NULL, '男', '16计算机科学与技术（2）', '机电系', 20, '17348845931');
+INSERT INTO `student` VALUES ('Xb16620222', '张伟元', NULL, '男', '16计算机科学与技术（2）', '机电系', 20, '15755066402');
+INSERT INTO `student` VALUES ('Xb16620223', '钟黎辉', NULL, '男', '16计算机科学与技术（2）', '机电系', 20, '17348845769');
+INSERT INTO `student` VALUES ('Xb16620224', '朱炫翰', NULL, '男', '16计算机科学与技术（2）', '机电系', 20, '15868162125');
+INSERT INTO `student` VALUES ('Xb16620225', '施嘉琪', NULL, '女', '16计算机科学与技术（2）', '机电系', 20, '18257878812');
+INSERT INTO `student` VALUES ('Xb16620226', '王超群', NULL, '女', '16计算机科学与技术（2）', '机电系', 21, '15957662859');
+INSERT INTO `student` VALUES ('Xb16620227', '王秀仪', NULL, '女', '16计算机科学与技术（2）', '机电系', 19, '13857591503');
+INSERT INTO `student` VALUES ('Xb16620228', '王依丽', NULL, '女', '16计算机科学与技术（2）', '机电系', 21, '15215806906');
+INSERT INTO `student` VALUES ('Xb16620229', '姚莹莹', NULL, '女', '16计算机科学与技术（2）', '机电系', 21, '15868160890');
+INSERT INTO `student` VALUES ('Xb16620230', '张伟', NULL, '女', '16计算机科学与技术（2）', '机电系', 21, '15868160576');
+INSERT INTO `student` VALUES ('Xb16620231', '章宝丹', NULL, '女', '16计算机科学与技术（2）', '机电系', 20, '15868160530');
+INSERT INTO `student` VALUES ('Xb16620233', '赖博纯', NULL, '男', '16计算机科学与技术（2）', '机电系', 20, '13706610709');
+INSERT INTO `student` VALUES ('Xb16680108', '李智敏', NULL, '男', '16计算机科学与技术（1）', '机电系', 20, '15868159657');
+INSERT INTO `student` VALUES ('Xc16560217', '毛飞红', NULL, '女', '16计算机科学与技术（1）', '机电系', 20, '15268883533');
+INSERT INTO `student` VALUES ('Xf16220132', '祝勇强', NULL, '男', '16计算机科学与技术（2）', '机电系', 21, '15868101035');
 
 -- ----------------------------
 -- Table structure for teacher
@@ -353,6 +369,7 @@ DROP TABLE IF EXISTS `teacher`;
 CREATE TABLE `teacher`  (
   `teacher_id` varchar(11) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `sex` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `education` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `academic` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
@@ -364,44 +381,44 @@ CREATE TABLE `teacher`  (
 -- ----------------------------
 -- Records of teacher
 -- ----------------------------
-INSERT INTO `teacher` VALUES ('T0001', '蓝庆青', '男', '本科', '高级', 21, '13666654939');
-INSERT INTO `teacher` VALUES ('T0002', '马春生', '女', '硕士', '中级', 22, '13685758573');
-INSERT INTO `teacher` VALUES ('T0003', '石永锋', '男', '博士', '高级', 23, '15988195009');
-INSERT INTO `teacher` VALUES ('T0004', '邓斌峰', '女', '本科', '中级', 24, '15058198908');
-INSERT INTO `teacher` VALUES ('T0005', '陈伟平', '女', '硕士', '高级', 25, '13516818660');
-INSERT INTO `teacher` VALUES ('T0006', '汤宁', '男', '博士', '中级', 26, '13958072003');
-INSERT INTO `teacher` VALUES ('T0007', '贝金铸', '女', '本科', '高级', 27, '13073678787');
-INSERT INTO `teacher` VALUES ('T0008', '伍小龙', '男', '硕士', '中级', 28, '13777427187');
-INSERT INTO `teacher` VALUES ('T0009', '戴小珍', '女', '博士', '高级', 29, '13958005979');
-INSERT INTO `teacher` VALUES ('T0010', '贺建辉', '女', '本科', '中级', 30, '13706509464');
-INSERT INTO `teacher` VALUES ('T0011', '吕洪炜', '男', '硕士', '高级', 31, '15857105099');
-INSERT INTO `teacher` VALUES ('T0012', '陆晓燕', '女', '博士', '中级', 32, '13588746821');
-INSERT INTO `teacher` VALUES ('T0013', '包晓安', '男', '本科', '高级', 33, '13221413078');
-INSERT INTO `teacher` VALUES ('T0014', '陈江丽', '女', '硕士', '中级', 34, '13819147442');
-INSERT INTO `teacher` VALUES ('T0015', '鲍小忠', '女', '博士', '高级', 35, '13706815155');
-INSERT INTO `teacher` VALUES ('T0016', '周薇', '男', '本科', '中级', 36, '15858137735');
-INSERT INTO `teacher` VALUES ('T0017', '王丽婷', '男', '硕士', '高级', 21, '15858260962');
-INSERT INTO `teacher` VALUES ('T0018', '谢春伟', '女', '本科', '中级', 22, '18057139126');
-INSERT INTO `teacher` VALUES ('T0019', '陈渭力', '男', '硕士', '高级', 23, '13867473330');
-INSERT INTO `teacher` VALUES ('T0020', '陈淼', '女', '博士', '中级', 24, '15067189774');
-INSERT INTO `teacher` VALUES ('T0021', '陈伟平', '女', '本科', '高级', 25, '15058178684');
-INSERT INTO `teacher` VALUES ('T0022', '邓斌峰', '男', '硕士', '中级', 26, '15058198908');
-INSERT INTO `teacher` VALUES ('T0023', '钱津津', '男', '博士', '高级', 27, '15267008311');
-INSERT INTO `teacher` VALUES ('T0024', '潘晓丹', '女', '本科', '中级', 28, '13588144405');
-INSERT INTO `teacher` VALUES ('T0025', '王燕青', '男', '硕士', '高级', 29, '15088688749');
-INSERT INTO `teacher` VALUES ('T0026', '张哲丽', '男', '博士', '中级', 30, '13666651246');
-INSERT INTO `teacher` VALUES ('T0027', '刘海霞', '女', '本科', '高级', 31, '15868483883');
-INSERT INTO `teacher` VALUES ('T0028', '熊立本', '男', '硕士', '中级', 32, '15088639863');
-INSERT INTO `teacher` VALUES ('T0029', '吕洪炜', '女', '博士', '高级', 33, '15857105099');
-INSERT INTO `teacher` VALUES ('T0030', '王菊雅', '女', '本科', '中级', 34, '13735461858');
-INSERT INTO `teacher` VALUES ('T0031', '张胜利', '男', '硕士', '高级', 35, '15700191299');
-INSERT INTO `teacher` VALUES ('T0032', '刘天', '女', '博士', '中级', 36, '13958188413');
-INSERT INTO `teacher` VALUES ('T0033', '唐柳青', '男', '本科', '高级', 21, '15158107216');
-INSERT INTO `teacher` VALUES ('T0034', '王春平', '男', '硕士', '中级', 22, '13515815152');
-INSERT INTO `teacher` VALUES ('T0035', '钱津津', '女', '博士', '高级', 23, '15267008311');
-INSERT INTO `teacher` VALUES ('T0036', '陈淼', '男', '本科', '中级', 24, '15067189774');
-INSERT INTO `teacher` VALUES ('T0037', '陈渭力', '女', '硕士', '高级', 25, '13867473330');
-INSERT INTO `teacher` VALUES ('T0038', '郑春玲', '女', '博士', '中级', 26, '18057139853');
-INSERT INTO `teacher` VALUES ('T0039', '邓斌峰', '男', '本科', '高级', 27, '15058198908');
+INSERT INTO `teacher` VALUES ('T0001', '蓝庆青', '1', '男', '本科', '高级', 21, '13666654939');
+INSERT INTO `teacher` VALUES ('T0002', '马春生', '2', '女', '硕士', '中级', 22, '13685758573');
+INSERT INTO `teacher` VALUES ('T0003', '石永锋', '3', '男', '博士', '高级', 23, '15988195009');
+INSERT INTO `teacher` VALUES ('T0004', '邓斌峰', '4', '女', '本科', '中级', 24, '15058198908');
+INSERT INTO `teacher` VALUES ('T0005', '陈伟平', '5', '女', '硕士', '高级', 25, '13516818660');
+INSERT INTO `teacher` VALUES ('T0006', '汤宁', '7', '男', '博士', '中级', 26, '13958072003');
+INSERT INTO `teacher` VALUES ('T0007', '贝金铸', '8', '女', '本科', '高级', 27, '13073678787');
+INSERT INTO `teacher` VALUES ('T0008', '伍小龙', NULL, '男', '硕士', '中级', 28, '13777427187');
+INSERT INTO `teacher` VALUES ('T0009', '戴小珍', NULL, '女', '博士', '高级', 29, '13958005979');
+INSERT INTO `teacher` VALUES ('T0010', '贺建辉', NULL, '女', '本科', '中级', 30, '13706509464');
+INSERT INTO `teacher` VALUES ('T0011', '吕洪炜', NULL, '男', '硕士', '高级', 31, '15857105099');
+INSERT INTO `teacher` VALUES ('T0012', '陆晓燕', NULL, '女', '博士', '中级', 32, '13588746821');
+INSERT INTO `teacher` VALUES ('T0013', '包晓安', NULL, '男', '本科', '高级', 33, '13221413078');
+INSERT INTO `teacher` VALUES ('T0014', '陈江丽', NULL, '女', '硕士', '中级', 34, '13819147442');
+INSERT INTO `teacher` VALUES ('T0015', '鲍小忠', NULL, '女', '博士', '高级', 35, '13706815155');
+INSERT INTO `teacher` VALUES ('T0016', '周薇', NULL, '男', '本科', '中级', 36, '15858137735');
+INSERT INTO `teacher` VALUES ('T0017', '王丽婷', NULL, '男', '硕士', '高级', 21, '15858260962');
+INSERT INTO `teacher` VALUES ('T0018', '谢春伟', NULL, '女', '本科', '中级', 22, '18057139126');
+INSERT INTO `teacher` VALUES ('T0019', '陈渭力', NULL, '男', '硕士', '高级', 23, '13867473330');
+INSERT INTO `teacher` VALUES ('T0020', '陈淼', NULL, '女', '博士', '中级', 24, '15067189774');
+INSERT INTO `teacher` VALUES ('T0021', '陈伟平', NULL, '女', '本科', '高级', 25, '15058178684');
+INSERT INTO `teacher` VALUES ('T0022', '邓斌峰', NULL, '男', '硕士', '中级', 26, '15058198908');
+INSERT INTO `teacher` VALUES ('T0023', '钱津津', NULL, '男', '博士', '高级', 27, '15267008311');
+INSERT INTO `teacher` VALUES ('T0024', '潘晓丹', NULL, '女', '本科', '中级', 28, '13588144405');
+INSERT INTO `teacher` VALUES ('T0025', '王燕青', NULL, '男', '硕士', '高级', 29, '15088688749');
+INSERT INTO `teacher` VALUES ('T0026', '张哲丽', NULL, '男', '博士', '中级', 30, '13666651246');
+INSERT INTO `teacher` VALUES ('T0027', '刘海霞', NULL, '女', '本科', '高级', 31, '15868483883');
+INSERT INTO `teacher` VALUES ('T0028', '熊立本', NULL, '男', '硕士', '中级', 32, '15088639863');
+INSERT INTO `teacher` VALUES ('T0029', '吕洪炜', NULL, '女', '博士', '高级', 33, '15857105099');
+INSERT INTO `teacher` VALUES ('T0030', '王菊雅', NULL, '女', '本科', '中级', 34, '13735461858');
+INSERT INTO `teacher` VALUES ('T0031', '张胜利', NULL, '男', '硕士', '高级', 35, '15700191299');
+INSERT INTO `teacher` VALUES ('T0032', '刘天', NULL, '女', '博士', '中级', 36, '13958188413');
+INSERT INTO `teacher` VALUES ('T0033', '唐柳青', NULL, '男', '本科', '高级', 21, '15158107216');
+INSERT INTO `teacher` VALUES ('T0034', '王春平', NULL, '男', '硕士', '中级', 22, '13515815152');
+INSERT INTO `teacher` VALUES ('T0035', '钱津津', NULL, '女', '博士', '高级', 23, '15267008311');
+INSERT INTO `teacher` VALUES ('T0036', '陈淼', NULL, '男', '本科', '中级', 24, '15067189774');
+INSERT INTO `teacher` VALUES ('T0037', '陈渭力', NULL, '女', '硕士', '高级', 25, '13867473330');
+INSERT INTO `teacher` VALUES ('T0038', '郑春玲', NULL, '女', '博士', '中级', 26, '18057139853');
+INSERT INTO `teacher` VALUES ('T0039', '邓斌峰', NULL, '男', '本科', '高级', 27, '15058198908');
 
 SET FOREIGN_KEY_CHECKS = 1;
